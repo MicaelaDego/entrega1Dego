@@ -4,20 +4,20 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def inicio (request):
-    return HttpResponse('Vista de Inicio')
+def inicio (request,):
+    return render (request, 'appDego/index.html')
 
 def usuarios (request):
-    return HttpResponse ('vista de usuarios')
+    return render (request, 'appDego/usuarios.html')
 
 def clientes (request):
-    return HttpResponse ('Vista de clientes')
+    return render (request, 'appDego/clientes.html')
 
 def impuestos (request):
-    return HttpResponse ('Vista de Impuestos')
+    return render (request, 'appDego/impuestos.html')
 
-def calendario_tareas (request):
-    return HttpResponse ('Vista de tareas')
+def vencimientos (request):
+    return render (request, 'appDego/vencimientos.html')
 
 def foro (request):
-    return HttpResponse ('Vista de Foro')
+    return render (request, 'appDego/foro.html')

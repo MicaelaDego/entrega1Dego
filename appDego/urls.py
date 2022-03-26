@@ -8,7 +8,7 @@ urlpatterns = [
 path ('Usuarios/', usuarios),
 path ('Clientes/', clientes),
 path ('Impuestos/', impuestos),
-path ('Tareas/', calendario_tareas),
+path ('Vencimientos/', vencimientos),
 path ('Foro/', foro),
 path ('', inicio),
 
