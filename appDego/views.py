@@ -21,3 +21,6 @@ def vencimientos (request):
 
 def foro (request):
     return render (request, 'appDego/foro.html')
+
+def inicio_sesion (request):
+    return render (request, 'appDego/inicio_sesion.html')
