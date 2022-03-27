@@ -14,6 +14,7 @@ class Clientes (models.Model):
     cuit=models.IntegerField(primary_key=True)
     telefono = models.IntegerField()
     email = models.EmailField()
+    
 
 class Impuestos (models.Model):
     impuesto = models.CharField(max_length=100)
