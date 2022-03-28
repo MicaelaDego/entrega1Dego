@@ -7,7 +7,7 @@
     <title>Busqueda cliente</title>
 </head>
 <body>
-    <form action =  '/appDego/buscar' method="GET"> 
+    <form action = '/appDego/buscar/' method="get"> 
         Cliente : <input type = 'text' name = 'apellido' >
         <input type = 'submit' value = 'buscar'> 
 
@@ -17,7 +17,6 @@
         <p> EMAIL: {{cliente.email}} </p>
         <p> TELEFONO: {{cliente.telefono}} </p>
     {% endif %}
-
 
 </body>
 </html>

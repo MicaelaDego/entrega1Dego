@@ -18,14 +18,19 @@ class Clientesformulario (forms.Form):
     telefono = forms.IntegerField()
     email = forms.CharField(max_length=80)
     
+
 class Impuestosformulario (forms.Form):
-    # campos del formulario
-    impuesto = models.CharField(max_length=100)
-    tipo = models.CharField(max_length=40)
-    codigo_impuesto = models.IntegerField()
-    repeticion = models.CharField(max_length=40)
+    impuesto = forms.CharField(max_length=40)
+    tipo = forms.CharField(max_length=40)
+    codigo_impuesto = forms.IntegerField()
+    repeticion = forms.CharField(max_length=40)
 
 class Vencimientosformulario (forms.Form):
-    impuesto = models.CharField(max_length=40)
-    codigo_impuesto = models.IntegerField()
-    fecha_vencimiento = models.DateField()
+    impuesto = forms.CharField(max_length=40)
+    codigo_impuesto = forms.IntegerField()
+    fecha_vencimiento = forms.DateField()
+
+class Foroformulario (forms.Form):
+    usuario = forms.CharField(max_length=40)
+    contraseña = forms.IntegerField()
+
