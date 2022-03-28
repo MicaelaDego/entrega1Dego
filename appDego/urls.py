@@ -11,9 +11,12 @@ path ('Impuestos/', impuestos, name = 'Impuestos'),
 path ('Vencimientos/', vencimientos, name= 'Vencimientos'),
 path ('Foro/', foro, name= 'Foro'),
 path ('', inicio, name= 'Inicio' ),
-path ('Inicio_sesion/', inicio_sesion, name = 'Inicio_sesion'),
+
 path ('usuariosformulario/', formulario_usuario, name = 'usuariosformulario'),
-path ('busquedacliente/', buscar_cliente, name = 'buscarcliente'),
+path ('clientesformulario/', formulario_cliente , name  = 'clientesformulario'),
+path ('impuestosformulario/', formulario_impuestos , name = 'impuestosformulario'),
+path ('vencimientosformulario/', formulario_vencimientos, name = 'vencimientosformualrio'),
+path ('busquedacliente/', buscar, name = 'busquedacliente'),
 path ('buscar/', buscar)
 
 
