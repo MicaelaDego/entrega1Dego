@@ -64,3 +64,4 @@ def buscar_cliente (request):
 
 # def resultado (request):
 #     respuesta = f''
+'efrgrgtht'
