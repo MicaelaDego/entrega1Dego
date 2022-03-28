@@ -1,5 +1,6 @@
 
 
+from sqlite3 import apilevel
 from django.http import HttpResponse
 from django.shortcuts import render
 from appDego.models import *
@@ -97,19 +98,16 @@ def formulario_foro (request):
         usuario_form = Foroformulario()
     return render (request, 'appDego/foroformulario.html',{'formulario': usuario_form} )
 
-
-# def buscar (request):
-
+def buscar (request):
    
-#     if request.GET ['apellido']:
-        
-#         apellido = request.GET['apellido']
-#         cliente = Clientes.objects.filter (apellido__icontains= apellido)
-#         return render (request, 'appDego/buscarcliente.html', { "apellido": apellido, 'cliente': cliente [0], 'cuit': cliente [0], 'email': cliente [0], 'telefono': cliente [0]})
-#     else:
-#         respuesta = "No se encontro el cliente"
-#     return HttpResponse (respuesta)
+    if request.GET ['apellido']:
+        apellido = request.GET['apellido']
+        cliente = Clientes.objects.filter (apellido__icontains= apellido)
+        return render (request, 'appDego/buscarcliente.html', { "apellido": apellido, 'cliente': cliente [0], 'cuit': cliente [0], 'email': cliente [0], 'telefono': cliente [0]})
+    else:
+        respuesta = "No se encontro el cliente"
+    return HttpResponse (respuesta)
 
-# def buscar_cliente (request):
-#     return render (request, 'appDego/busquedacliente.html')
-    
+def buscar_cliente (request):
+    return render (request, 'appDego/buscarcliente.html')
+

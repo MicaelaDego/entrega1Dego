@@ -13,7 +13,9 @@ path ('', inicio, name= 'Inicio' ),
 path ('usuariosformulario/', formulario_usuario, name = 'usuariosformulario'),
 path ('clientesformulario/', formulario_cliente, name = 'clientesformulario'),
 path ('impuestosformulario/', formulario_impuesto, name = 'impuestosformulario'),
-path ('foroformulario/', formulario_foro, name= 'foroformulario')
+path ('foroformulario/', formulario_foro, name= 'foroformulario'),
+path ('buscarcliente/', buscar_cliente, name = 'buscarcliente'),
+path ('buscar/', buscar)
 
 
 
