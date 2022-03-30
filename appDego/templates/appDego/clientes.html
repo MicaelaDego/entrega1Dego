@@ -2,6 +2,35 @@
 
 {% block main_content %}
 
-<p> vista de clientes </p>
+        <!-- Header-->
+        <header class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h1 class="display-5 fw-bold">Seccion clientes</h1>
+                        <p class="fs-4">Gestione aqui sus clientes</p>
+                        <a class="btn btn-primary" href="/appDego/buscarcliente">Buscar →</a>
+                    </div>
+        </header>
+                        <div class = "container mt-5 ">
+                            {% if formulario.errors %} 
+                            <p style="color:red"> Problemas al cargar los datos </p>
+                        {% endif %} 
+                    
+                        <form action = "/appDego/Clientes/" method="POST" class = 'form-group' > 
+                            {% csrf_token %}
+                            <table> {{ formulario }}
+                    
+                            </table>
+                            <p></p>
+                            <p></p>
+                            <input type = 'submit', value="Cargar cliente" class = 'btn btn-primary btn-lg'>
+                            <p></p>
+                            <p></p>
+                      
+                        </div>
+                     
+                  
+                       
 
 {% endblock main_content %}

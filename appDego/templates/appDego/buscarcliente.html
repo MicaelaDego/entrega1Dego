@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busqueda cliente </title>
-</head>
+    <head>
+        {% load static %}
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Conta blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href=" {% static 'appDego/assets/favicon.ico' %} " />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'appDego/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'Inicio' %}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Usuarios' %} ">Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href=" {% url 'Clientes' %}">Clientes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Impuestos' %}">Impuestos</a></li>
+               
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Foro' %}">Foro</a></li>
+                     </ul>
+                </div>
+            </div>
+        </nav>
+  
 <body>
+
+    <div class = "container mt-5 ">
+
     <form action = '/appDego/buscar/' method="get"> 
-        Cliente (ingrese apellido para buscar) : <input type = 'text' name = 'apellido' >
-        <input type = 'submit' value = 'buscar'> 
+        <h2 class="card-title h4">Ingrese apellido para bucar
+        <input type = 'text' name = 'apellido' > <input type = 'submit' value = 'Buscar' class ='btn btn-primary '> </h2>
 
     {% if cliente %}
-        <p> CLIENTE ENCONTRADO:  {{apellido}} {{cliente.nombre}} </p>
+        <p> CLIENTE ENCONTRADO:  {{apellido}} {{clientes}} </p>
         <p> CUIT: {{cliente.cuit}} </p>
         <p> EMAIL: {{cliente.email}} </p>
         <p> TELEFONO: {{cliente.telefono}} </p>
     {% endif %}
 
+
+    </div>
 </body>
 </html>
+
+
+
+
+
+

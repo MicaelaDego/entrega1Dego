@@ -5,7 +5,7 @@ from django.db import models
 class Usuarios (models.Model):
     nombre = models.CharField(max_length= 40)
     apellido = models.CharField(max_length=40)
-    documento = models.IntegerField()
+    documento = models.IntegerField(primary_key=True)
     mail = models.EmailField()
 
 class Clientes (models.Model):
